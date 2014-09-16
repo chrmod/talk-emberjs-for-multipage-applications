@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ember.js for multipage applications</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="themes/warsawjs/styles/screen.css">
+    <link rel="stylesheet" href="themes/warsawjs/styles/custom.css">
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>chrmod at warsawjs</h1>
+        <p>We talk about JavaScript. Each month in Warsaw, Poland.</p>
+    </header>
+
+    <section class="slide front-page">
+        <div>
+            <div class="logo">
+                <img src="themes/warsawjs/pictures/logo.png">
+            </div>
+            <div class="content">
+                <h2>Ember.js for multipage applications</h2>
+                <p>Krzysztof Modras <a href="http://twitter.com/chrmod">@chrmod</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <p>
+                <img src="images/ember-d3.png" style="height: 600px; display: block; margin: -100px auto 0 auto;"/>
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>So you have some Big, Tasty jQuery</h2>
+            <p>
+                <img src="images/spaghetti.jpg" style="height: 400px; display: block; margin: 0 auto;"/>
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>You've ended with little CB hell?</h2>
+            <pre>
+                <code>$(document).<mark class="important">ready</mark>(function () {</code>
+                <code>  $('#click-it-please").on('<mark class="important">click</mark>', function () {</code>
+                <code>    $(this).<mark class="important">hide</mark>('slow', function () {</code>
+                <code>      <mark>i guess here you have some black business magic</mark> </code>
+                <code>    });</code>
+                <code>  });</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Captain Tomster for the resque!</h2>
+            <p>
+                <img src="images/ember-training.png" style="height: 400px; display: block; margin: 0 auto;"/>
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>In fact it's pretty easy to start</h2>
+            <pre>
+              <code><mark class="comment">// app.js</mark></code>
+              <code>App = Ember.Application.create({</code>
+              <code>  <mark class="important">rootElement: "#content"</mark></code>
+              <code>});</code>
+              <code><mark class="comment">// in template</mark></code>
+              <code>&lt;script type="text/x-handlebars"&gt;</code>
+              <code>  <mark>some nice handlebars template</mark></code>
+              <code>&lt;/script&gt;</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>There is no need for router</h2>
+            <pre>
+              <code>App.ApplicationRoute      = App.Feature1Route.extend();</code>
+              <code>App.ApplicationController = App.Feature1Controller.extend();</code>
+              <code>App.ApplicationView       = App.Feature1View.extend();</code>
+            </pre>
+            <p>
+            It is not really an application code. You may consider it as <strong>configuration</strong>. Each single page that needs more advanced JS can have one.
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Why all this trouble?</h2>
+            <ol>
+              <li>Nice encapsulation</li>
+              <li><strong>Unit test coverage</strong></li>
+              <li>Reusable code</li>
+              <li>Simple path to integrate multiple pages into one app</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="slide">
+            <p>
+                <img src="images/emberjs-logo.png" style="height: 400px; display: block; margin: 100px auto 0 auto;"/>
+            </p>
+    </section>
+
+    <section class="slide shout">
+        <div>
+            <h2>See you next month at WarsawJS</h2>
+        </div>
+    </section>
+
+    <p class="badge"><a href="https://github.com/warsawjs/presentation-template">Fork me on Github</a></p>
+
+    <div class="progress">
+        <div></div>
+    </div>
+
+    <script src="shower/shower.min.js"></script>
+</body>
+</html>
